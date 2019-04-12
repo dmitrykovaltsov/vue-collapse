@@ -1,6 +1,6 @@
 <template>
     <div :class="'vc-' + $options.$vc.settings.basename">
-        <slot></slot>
+        <slot v-bind:status="status"></slot>
     </div>
 </template>
 
@@ -14,7 +14,7 @@
                 status: false,
             }
         },
-        
+
         props: ['active'],
 
         // status watcher - change toggle element when status changes
